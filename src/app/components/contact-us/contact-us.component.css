@@ -1,0 +1,36 @@
+.contact-container {
+    background-color: var(--neutral-color);
+    font-family: var(--font-main);
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact-form h2,
+  .contact-info h4 {
+    color: var(--primary-color);
+  }
+  
+  .contact-info p {
+    color: var(--dark-text);
+    font-size: 1rem;
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: var(--dark-text);
+  }
+  
+  .submit-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+  }
+  

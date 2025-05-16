@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+/* :root {
+    --primary-color: #B68973;   
+    --accent-color: #EABF9F;    
+    --neutral-color: #FDF6EC;   
+    --dark-text: #2D2D2D;       
+    --light-text: #3F3F3F;
+  
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  } */
+
+/* :root {
+    --primary-color: #00B4D8;   
+    --accent-color: #CAF0F8;    
+    --neutral-color: #F8F9FA;   
+    --dark-text: #2D2D2D;       
+    --light-text: #343A40;
+  
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  } */
+
+:root {
+    --primary-color: #2C786C;
+    --accent-color: #90D26D;
+    --neutral-color: #F7F7F7;
+    --dark-text: #2D2D2D;
+    --light-text: #ffffff;
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

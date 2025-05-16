@@ -1,0 +1,58 @@
+<!-- <div class="container py-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input [(ngModel)]="contactForm.name" name="name" required id="name" class="form-control" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input [(ngModel)]="contactForm.email" name="email" type="email" required id="email" class="form-control" />
+      </div>
+  
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea [(ngModel)]="contactForm.message" name="message" rows="5" required id="message" class="form-control"></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Send Message</button>
+    </form>
+  </div> -->
+  
+
+  <div class="contact-container container py-5">
+    <div class="row d-flex align-items-center justify-content-center">
+      <!-- Form Column -->
+      <div class="col-md-6 mb-4 contact-form">
+        <h2 class="mb-4">Contact Us</h2>
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input [(ngModel)]="contactForm.name" name="name" required id="name" class="form-control" />
+          </div>
+  
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input [(ngModel)]="contactForm.email" name="email" type="email" required id="email" class="form-control" />
+          </div>
+  
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea [(ngModel)]="contactForm.message" name="message" rows="5" required id="message" class="form-control"></textarea>
+          </div>
+  
+          <button type="submit" class="btn submit-btn w-100" [disabled]="form.invalid">Send Message</button>
+        </form>
+      </div>
+  
+      <!-- Contact Info Column -->
+      <div class="col-md-6 contact-info px-4">
+        <h4 class="mb-3">Get in Touch</h4>
+        <p><strong>Phone:</strong> +92 123 4567890</p>
+        <p><strong>Email:</strong> infotourwebsite.com</p>
+        <p><strong>Address:</strong> 123 Tour Street, Islamabad, Pakistan</p>
+      </div>
+    </div>
+  </div>
+  

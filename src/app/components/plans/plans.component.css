@@ -1,0 +1,18 @@
+.card-title {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+.card-text {
+    font-size: 0.95rem;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}

@@ -1,0 +1,121 @@
+<!-- Hero Section -->
+<section class="hero-section text-white d-flex align-items-center">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Discover Your Next Adventure</h1>
+        <p class="lead">Plan unforgettable trips with ease. Explore nature, culture, and more!</p>
+        <a routerLink="/plans" class="btn btn-light btn-lg mt-3">View Tour Plans</a>
+    </div>
+</section>
+
+<!-- slider -->
+<div class="swiper slide-container text-center">
+    <!-- Wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide card" *ngFor="let nature of natures">
+            <div class="image-content">
+                <span class="overlay"></span>
+                <div class="card-image">
+                    <img [src]="nature.img" class="card-img" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="bi bi-globe fs-1 text-primary mb-3"></i>
+                <h5>Worldwide Tours</h5>
+                <p>We offer travel packages across stunning global destinations.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-person-check fs-1 text-primary mb-3"></i>
+                <h5>Expert Guides</h5>
+                <p>Experienced local guides to enrich your journey with insights and safety.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-star-half fs-1 text-primary mb-3"></i>
+                <h5>Affordable Plans</h5>
+                <p>Enjoy amazing experiences with flexible pricing for all budgets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Plans Preview -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Popular Tours</h2>
+        <div class="row g-4">
+            <div class="col-md-4" *ngFor="let plan of samplePlans">
+                <div class="card h-100 shadow-sm">
+                    <img [src]="plan.image" class="card-img-top" [alt]="plan.title" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ plan.title }}</h5>
+                        <p class="card-text">{{ plan.description }}</p>
+                        <a routerLink="/plans" class="btn btn-sm">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section text-white text-center py-5">
+    <div class="container">
+        <h3>Ready to explore?</h3>
+        <p>Book your journey now and turn your travel dreams into reality.</p>
+        <a routerLink="/contact-us" class="btn btn-light">Contact Us</a>
+    </div>
+</section>
+
+<div class="container mt-5 mb-5 col-md-6">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                    What services do you offer?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    We offer a variety of travel and tour packages across Pakistan.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo">
+                    How can I book a tour?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    You can book a tour by visiting our Plans page and contacting us through the form.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree">
+                    Do you provide custom packages?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, we provide fully customized packages based on your preferences.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

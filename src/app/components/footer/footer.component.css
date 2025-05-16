@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: var(--light-text);
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: var(--accent-color);
+  }
+  
+  .footer-brand {
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+  }
+  
+  .social-icons i {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    transition: color 0.3s;
+  }
+  
+  .social-icons i:hover {
+    color: var(--accent-color);
+  }
+  

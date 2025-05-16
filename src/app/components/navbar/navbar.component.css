@@ -1,0 +1,12 @@
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.nav-link {
+  color: var(--light-text);
+  font-family: var(--font-main);
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color);
+}
