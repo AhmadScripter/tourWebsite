@@ -10,3 +10,7 @@
 .nav-link.active {
   color: var(--accent-color);
 }
+
+.offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
+  background: var(--primary-color);
+}

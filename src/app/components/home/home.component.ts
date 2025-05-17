@@ -30,8 +30,8 @@ export class HomeComponent implements OnInit{
   ];
 
   natures = [
-    {img: 'assets/nature/n1.jpeg'},
-    {img: 'assets/nature/n2.jpeg'},
+    {img: 'assets/nature/n23.jpeg'},
+    {img: 'assets/nature/n24.jpeg'},
     {img: 'assets/nature/n3.jpeg'},
     {img: 'assets/nature/n4.jpeg'},
     {img: 'assets/nature/n5.jpeg'},
@@ -52,8 +52,8 @@ export class HomeComponent implements OnInit{
     {img: 'assets/nature/n20.jpeg'},
     {img: 'assets/nature/n21.jpeg'},
     {img: 'assets/nature/n22.jpeg'},
-    {img: 'assets/nature/n23.jpeg'},
-    {img: 'assets/nature/n24.jpeg'},
+    {img: 'assets/nature/n1.jpeg'},
+    {img: 'assets/nature/n2.jpeg'},
     {img: 'assets/nature/n25.jpeg'},
     {img: 'assets/nature/n26.jpeg'},
   ];
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit{
       const swiper = new Swiper('.swiper', {
         modules: [Navigation, Pagination, Autoplay],
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 5,
         loop: true,
         centeredSlides: false,
         grabCursor: true,
