@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Admin Dashboard - Manage Tours</h2>
+    <div class="row">
+      <div class="col-12 mb-3 text-end">
+        <button class="btn btn-success" [routerLink]="['/admin/add-tour']">+ Add Tour</button>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let tour of tours">
+        <div class="card h-100 shadow">
+          <img *ngIf="tour.img" [src]="'http://localhost:3000' + tour.img" crossorigin="anonymous" class="card-img-top" alt="Tour Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ tour.location }}</h5>
+            <p class="card-text">{{ tour.description }}</p>
+            <ul class="list-unstyled mb-3">
+              <li><strong>Charges (Per Head):</strong> {{ tour.charges?.perHead }}</li>
+              <li><strong>Charges (Per Couple):</strong> {{ tour.charges?.perCouple }}</li>
+              <li><strong>Total Days:</strong> {{ tour.totalDays }}</li>
+              <li><strong>Departure Day:</strong> {{ tour.departureDay }}</li>
+              <li><strong>Services Provided:</strong> {{ tour.servicesProvided }}</li>
+              <li>
+                <strong>Meals:</strong>
+                {{ tour.mealProvided?.breakfast ? 'Breakfast' : '' }}
+                {{ tour.mealProvided?.lunch ? ', Lunch' : '' }}
+                {{ tour.mealProvided?.dinner ? ', Dinner' : '' }}
+              </li>
+              <li *ngIf="tour.placesToVisit?.length"><strong>Places to Visit:</strong>
+                <ul class="ms-3">
+                  <li *ngFor="let place of tour.placesToVisit">{{ place }}</li>
+                </ul>
+              </li>
+            </ul>
+            <button class="btn btn-sm btn-primary me-2" [routerLink]="['/admin/edit-tour', tour._id]">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteTour(tour._id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

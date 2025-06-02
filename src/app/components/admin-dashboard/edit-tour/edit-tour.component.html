@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <h3>Edit Tour</h3>
+    <form [formGroup]="tourForm" (ngSubmit)="updateTour()" class="mt-4">
+      <div class="mb-3">
+        <label>Location</label>
+        <input class="form-control" formControlName="location">
+      </div>
+      <div class="mb-3">
+        <label>Description</label>
+        <textarea class="form-control" formControlName="description"></textarea>
+      </div>
+      <div class="mb-3">
+        <label>Image URL</label>
+        <input class="form-control" formControlName="img">
+      </div>
+      <div class="mb-3">
+        <label>Total Days</label>
+        <input type="number" class="form-control" formControlName="totalDays">
+      </div>
+      <div class="mb-3">
+        <label>Departure Day</label>
+        <input class="form-control" formControlName="departureDay">
+      </div>
+      <div formGroupName="charges">
+        <div class="mb-3">
+          <label>Per Head</label>
+          <input type="number" class="form-control" formControlName="perHead">
+        </div>
+        <div class="mb-3">
+          <label>Per Couple</label>
+          <input type="number" class="form-control" formControlName="perCouple">
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Update Tour</button>
+    </form>
+  </div>
+  <a routerLink="/admin/dashboard" class="btn btn-outline-secondary mt-3">← Back to Dashboard</a>
+  

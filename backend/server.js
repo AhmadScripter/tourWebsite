@@ -14,6 +14,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(helmet());
+app.use('/uploads', express.static('uploads'));
 
 app.use('/api/auth', adminAuth);
 app.use('/api/tours', tourRoute);

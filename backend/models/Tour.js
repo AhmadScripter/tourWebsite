@@ -16,7 +16,7 @@ const tourSchema = new mongoose.Schema({
     },
     placesToVisit: [{ type: String }],
     description: { type: String, required: true },
-    img: { type: String }
+    img: { type: String, required: true }
 });
 
 module.exports = mongoose.model("Tour", tourSchema);
