@@ -76,39 +76,18 @@ const updateTour = async (req, res) => {
   }
 }
 
-// const deleteTour = async (req, res) => {
-//   try {
-//     const deletedTour = await Tour.findByIdAndDelete(req.params.id);
-//     if (!deletedTour) return res.status(404).json({ message: 'Tour not found' });
-
-//      // Delete the image file from the filesystem
-//      if (tour.img) {
-//       const imgPath = path.join(__dirname, "..", tour.img); // assuming img is like '/uploads/filename.jpg'
-//       fs.unlink(imgPath, (err) => {
-//         if (err) console.error("Error deleting image:", err);
-//       });
-//     }
-
-//     res.status(200).json({ message: 'Tour deleted successfully' });
-//   } catch (error) {
-//     res.status(400).json({ message: "Error delete Tour" });
-//   }
-// }
-
 const deleteTour = async (req, res) => {
   try {
     const tour = await Tour.findById(req.params.id);
     if (!tour) return res.status(404).json({ message: 'Tour not found' });
 
-    // Delete the image file from the filesystem
     if (tour.img) {
-      const imgPath = path.join(__dirname, "..", tour.img); // assuming img is like '/uploads/filename.jpg'
+      const imgPath = path.join(__dirname, "..", tour.img);
       fs.unlink(imgPath, (err) => {
         if (err) console.error("Error deleting image:", err);
       });
     }
 
-    // Now delete the document from DB
     await Tour.findByIdAndDelete(req.params.id);
 
     res.status(200).json({ message: 'Tour deleted successfully' });

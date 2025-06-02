@@ -18,12 +18,21 @@
               <li><strong>Total Days:</strong> {{ tour.totalDays }}</li>
               <li><strong>Departure Day:</strong> {{ tour.departureDay }}</li>
               <li><strong>Services Provided:</strong> {{ tour.servicesProvided }}</li>
-              <li>
+              <li *ngIf="tour.mealProvided">
                 <strong>Meals:</strong>
-                {{ tour.mealProvided?.breakfast ? 'Breakfast' : '' }}
-                {{ tour.mealProvided?.lunch ? ', Lunch' : '' }}
-                {{ tour.mealProvided?.dinner ? ', Dinner' : '' }}
+                <ul class="ms-3">
+                  <li *ngIf="tour.mealProvided.breakfast">
+                    <strong>Breakfast:</strong> {{ tour.mealProvided.breakfast }}
+                  </li>
+                  <li *ngIf="tour.mealProvided.lunch">
+                    <strong>Lunch:</strong> {{ tour.mealProvided.lunch }}
+                  </li>
+                  <li *ngIf="tour.mealProvided.dinner">
+                    <strong>Dinner:</strong> {{ tour.mealProvided.dinner }}
+                  </li>
+                </ul>
               </li>
+              
               <li *ngIf="tour.placesToVisit?.length"><strong>Places to Visit:</strong>
                 <ul class="ms-3">
                   <li *ngFor="let place of tour.placesToVisit">{{ place }}</li>

@@ -15,12 +15,21 @@
             <li><strong>Total Days:</strong> {{ plan.totalDays }}</li>
             <li><strong>Departure Day:</strong> {{ plan.departureDay }}</li>
             <li><strong>Services Provided:</strong> {{ plan.servicesProvided }}</li>
-            <li>
+            <li *ngIf="plan.mealProvided">
               <strong>Meals:</strong>
-              {{ plan.mealProvided?.breakfast ? 'Breakfast' : '' }}
-              {{ plan.mealProvided?.lunch ? ', Lunch' : '' }}
-              {{ plan.mealProvided?.dinner ? ', Dinner' : '' }}
+              <ul class="ms-3">
+                <li *ngIf="plan.mealProvided.breakfast">
+                  <strong>Breakfast:</strong> {{ plan.mealProvided.breakfast }}
+                </li>
+                <li *ngIf="plan.mealProvided.lunch">
+                  <strong>Lunch:</strong> {{ plan.mealProvided.lunch }}
+                </li>
+                <li *ngIf="plan.mealProvided.dinner">
+                  <strong>Dinner:</strong> {{ plan.mealProvided.dinner }}
+                </li>
+              </ul>
             </li>
+            
             <li *ngIf="plan.placesToVisit?.length"><strong>Places to Visit:</strong>
               <ul class="ms-3">
                 <li *ngFor="let place of plan.placesToVisit">{{ place }}</li>
